@@ -69,11 +69,7 @@ struct node2_t{
 
 node2_t * mirror(node2_t * root){
     node2_t * mir = root;
-    mir->left = root->right;
-    mir->right = root->left;
-    mir->value = root->value;
-    if(mir->left != nullptr) mirror(mir->left);
-    if(mir->right != nullptr) mirror(mir->right);
+    mirror(mir);
     retun mir;
 }
 
